@@ -65,7 +65,7 @@ h1 {
   }
 }
 @media (max-width: 768px) {
-  .footer-img:focus {
+  .footer-img:active {
     transition: all 0.11s ease-out;
     background-color: #ad00ff;
     scale: 1.3;
