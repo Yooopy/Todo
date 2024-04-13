@@ -78,3 +78,21 @@ h1 {
     scale: 1.1;
   }
 }
+
+@media (max-width: 768px) {
+  #footer-img-plus {
+    background-color: #ad00ff;
+    content: url("assets/images/plus\ \(1\).png");
+    border-radius: 18px;
+    box-shadow: 0px 2px 10px -2px #ad00ff;
+  }
+  .footer-img {
+    background-color: white;
+  }
+  .footer-img:active {
+    background-color: #ad00ff;
+    border-radius: 18px;
+    box-shadow: 0px 0px 20px -5px #ad00ff;
+    scale: 1.3;
+  }
+}
