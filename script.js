@@ -1,30 +1,35 @@
-// function changeImageHome() {
-//   let img = document.getElementById("footer-img-home");
-//   img.src = "assets/images/home-w.png";
-// }
+let textV = "";
+plusBtn = document.getElementById("footer-img-plus");
+function createDiv(text) {
+  textV = prompt("Write About Your Plans :)");
+  if (textV != "" && textV != null) {
+    x = document.createElement("div");
+    x.innerHTML =
+      "<img style=' height: 20px;margin: auto 0 auto 10px;' src='assets/images/notes.png'><p style='display: block; word-wrap: break-word;width: 78%;'>" +
+      textV +
+      "</p> <div id='in-js-div-del'> <img style='height: 20px' src=assets/images/delete.png></div>";
+    x.className = "main-divs";
+    x.setAttribute("onclick", "this.remove()");
+    y = document.getElementById("main-art");
+    y.appendChild(x);
+  }
+}
 
-// function changeBackImageHome() {
-//   let img = document.getElementById("footer-img-home");
-//   img.src = "assets/images/home.png";
-// }
+// function createDiv(text) {
+//   textV = prompt("Write About Your Plans :)");
+//   x = document.createElement("div");
+//   x.innerHTML =
+//     "<img style=' height: 20px;margin: auto 0 auto 10px;' src='assets/images/notes.png'><p style='display: block; word-wrap: break-word;width: 78%;'>" +
+//     textV +
+//     "</p> <img o style='height: 20px' src='assets/images/delete.png'>";
+//   x.className = "main-divs";
 
-// function changeImageInfo() {
-//   let img = document.getElementById("footer-img-info");
-//   img.src = "assets/images/info-button.png";
+//   y = document.getElementById("main-art");
+//   y.appendChild(x);
 // }
-
-// function changeBackImageInfo() {
-//   let img = document.getElementById("footer-img-info");
-//   img.src = "assets/images/information.png";
-// }
-
-// function changeImagePlus() {
-//   let img = document.getElementById("footer-img-plus");
-//   img.src = "assets/images/plus (1).png";
-// }
-
-// function changeBackImagePlus() {
-//   let img = document.getElementById("footer-img-plus");
-//   img.src = "assets/images/plus.png";
-// }
-// //End of Footer Funcs :)
+// x.querySelector('img[src="assets/images/delete.png"]').addEventListener(
+//   "click",
+//   function () {
+//     x.remove();
+//   }
+// );
