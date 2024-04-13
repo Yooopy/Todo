@@ -42,5 +42,50 @@ p {
 #in-js-div-del {
   margin-left: auto;
   align-items: center;
-  margin-top: 5px;
+}
+
+#hint-div {
+  background-color: #f6e1ff;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px -8px #ad00ff;
+  width: 85%;
+  margin: auto;
+}
+
+#ask-div {
+  position: absolute;
+  background-color: #f6e1ff;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px auto auto 50%;
+  transform: translate(-51%);
+  margin-bottom: 10px;
+  padding: 1;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px -8px #ad00ff;
+  height: 150px;
+  width: 85%;
+  display: none;
+}
+
+input {
+  -ms-layout-grid-line: auto;
+  border-radius: 30px;
+  border: none;
+  margin: auto;
+  height: 50%;
+  width: 400px;
+  font-size: larger;
+  font-weight: 470;
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
