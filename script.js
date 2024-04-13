@@ -27,3 +27,4 @@ function changeBackImagePlus() {
   let img = document.getElementById("footer-img-plus");
   img.src = "assets/images/plus.png";
 }
+//End of Footer Funcs :)
