@@ -28,7 +28,10 @@ function createDiv(text) {
   divv = document.getElementById("ask-div");
   input = document.getElementById("ask-inp");
   textV = input.value;
+  divv.style.animation = "fadeout 0.3s ease";
+  divv.style.opacity = 1;
   divv.style.display = "flex";
+
   if (textV != "" && textV != null) {
     x = document.createElement("div");
     x.innerHTML =
@@ -40,6 +43,7 @@ function createDiv(text) {
     y = document.getElementById("main-art");
     y.appendChild(x);
     input.value = "";
-    divv.style.display = "none";
+    divv.style.opacity = 0;
+    divv.style.display = none;
   }
 }

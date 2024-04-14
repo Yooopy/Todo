@@ -75,6 +75,7 @@ p {
   height: 150px;
   width: 85%;
   display: none;
+  transition: all 0.3s ease-in-out;
 }
 
 input {
@@ -88,4 +89,13 @@ input {
   font-weight: 470;
   padding: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
