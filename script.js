@@ -26,25 +26,6 @@ function getCookie() {
 getCookie();
 plusBtn = document.getElementById("footer-img-plus");
 
-// function createDiv(text) {
-//   textV = prompt("Write About Your Plans :)");
-//   x = document.createElement("div");
-//   x.innerHTML =
-//     "<img style=' height: 20px;margin: auto 0 auto 10px;' src='assets/images/notes.png'><p style='display: block; word-wrap: break-word;width: 78%;'>" +
-//     textV +
-//     "</p> <img o style='height: 20px' src='assets/images/delete.png'>";
-//   x.className = "main-divs";
-
-//   y = document.getElementById("main-art");
-//   y.appendChild(x);
-// }
-// x.querySelector('img[src="assets/images/delete.png"]').addEventListener(
-//   "click",
-//   function () {
-//     x.remove();
-//   }
-// );
-
 function closeButt(div) {
   div.remove();
 }
@@ -68,8 +49,8 @@ function deleteDiv(div) {
 
 function createDiv(namee, valuee) {
   let divv = document.getElementById("ask-div");
-  let input = document.getElementById("ask-inp");
-  let input2 = document.getElementById("ask-inp2");
+  let inp1 = document.getElementById("ask-inp");
+  let inp2 = document.getElementById("ask-inp2");
   divv.style.animation = "fadeout 0.3s ease";
   divv.style.opacity = 1;
   divv.style.display = "flex";
@@ -87,17 +68,44 @@ function createDiv(namee, valuee) {
     makeDiv.setAttribute("onclick", "deleteDiv(this)");
     y = document.getElementById("main-art");
     y.appendChild(makeDiv);
-    input = "";
-    input2 = "";
+
     divv.style.opacity = 0;
     divv.style.display = "none";
-    var date = new Date();
+    let date = new Date();
     date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000); // 365 days from now
-    var expires = "expires=" + date.toUTCString();
+    let expires = "expires=" + date.toUTCString();
     nameeValue = namee;
     valueeValue = valuee;
     document.cookie =
       nameeValue + "=" + valueeValue + ";" + expires + ";path=/";
     console.log(document.cookie);
+    namee = "";
+    valuee = "";
+    inp1.value = "";
+    inp2.value = "";
+  }
+}
+function changeTheme() {
+  let icon = document.getElementById("changeMode");
+  if (icon.src.includes("dark")) {
+    icon.src = "assets/images/light_mode_FILL1_wght400_GRAD0_opsz24 (1).svg";
+    let body = document.getElementById("body");
+    body.style.transition = "all 0.5s ease";
+    body.style.backgroundColor = "#242424";
+    let bottom = document.getElementById("footer-div");
+    bottom.style.filter = "brightness(0.8)";
+    let header = document.getElementById("header");
+    document.getElementById("main-art").style.filter = "brightness(0.8)";
+    header.style.filter = "brightness(0.8)";
+    document.getElementById("ask-div").style.filter = "brightness(0.8)";
+  } else if (icon.src.includes("light")) {
+    icon.src = "assets/images/dark_mode_FILL1_wght400_GRAD0_opsz24 (1).svg";
+    body.style.backgroundColor = "white";
+
+    document.getElementById("ask-div").style.filter = "brightness(1)";
+    // document.getElementById("body").style.filter = "brightness(1)";
+    document.getElementById("main-art").style.filter = "brightness(1)";
+    document.getElementById("header").style.filter = "brightness(1)";
+    document.getElementById("footer-div").style.filter = "brightness(1)";
   }
 }

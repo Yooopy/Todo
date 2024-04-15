@@ -16,20 +16,20 @@
     <link href="style-other.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="body">
 
-    <header style="position: sticky; top:3px;">
+    <header id="header" style="position: sticky; top:3px;">
         <div id="header-div">
             <img class="normal-hover" alt="Notes" src="assets/images/icon-w.png" style="height: 25px;">
-            <h1 style="font-family: lato; font-weight: 900;">ToDo</h1>
-            <img onclick="window.open('https://github.com/yooopy')" class="normal-hover" alt="Github"
-                src="assets/images/github-w.png" height="25px">
+            <h1 style="font-family: roboto; font-weight: 900;">ToDo</h1>
+            <img style="filter:invert();" onclick="changeTheme()" class="normal-hover" alt="Night-Light-mode"
+                id="changeMode" src="assets/images/dark_mode_FILL1_wght400_GRAD0_opsz24 (1).svg" height="25px">
         </div>
     </header>
 
     <!--Main------------------>
 
-    <main style="margin-bottom: 80px;">
+    <main id="main" style="margin-bottom: 80px;">
 
         <!--There Is The Site Footer`s Panel----->
 
@@ -37,7 +37,7 @@
             <table style="width: 100%;">
                 <tr>
                     <td>
-                        <img onclick="window.open('https://yooopy.github.io')" alt="Home" id="footer-img-home"
+                        <img onclick="window.open('https://github.com/yooopy')" alt="Home" id="footer-img-home"
                             class="footer-img" src="assets/images/home.png">
                     </td>
                     <td><img alt="Add-Notes"
