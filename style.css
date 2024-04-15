@@ -22,6 +22,9 @@
 }
 p {
   margin: auto 0 auto 10px;
+  font-family: lato;
+  font-weight: 500;
+  font-style: bold;
 }
 
 @keyframes rotate-plus-frame {
@@ -60,9 +63,10 @@ p {
 }
 
 #ask-div {
-  position: absolute;
-  background-color: #f6e1ff;
-  height: 100px;
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  background-color: #a329d7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,23 +76,26 @@ p {
   padding: 1;
   border-radius: 25px;
   box-shadow: 0px 0px 40px -5px #242424;
-  height: 150px;
+  height: 200px;
   width: 85%;
-  display: none;
+  display: none; /*             change this later ok?*/
   transition: all 0.3s ease-in-out;
+  bottom: 50%;
 }
 
 input {
+  text-align: center;
   -ms-layout-grid-line: auto;
   border-radius: 20px;
-  border: none;
+  border: 2px solid #ffffff;
   margin: auto;
-  height: 40%;
+  height: 21%;
   width: 80%;
   font-size: larger;
   font-weight: 470;
   padding: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 5px;
 }
 
 @keyframes fadeout {
