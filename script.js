@@ -89,23 +89,22 @@ function changeTheme() {
   let icon = document.getElementById("changeMode");
   if (icon.src.includes("dark")) {
     icon.src = "assets/images/light_mode_FILL1_wght400_GRAD0_opsz24 (1).svg";
-    let body = document.getElementById("body");
-    body.style.transition = "all 0.5s ease";
-    body.style.backgroundColor = "#242424";
-    let bottom = document.getElementById("footer-div");
-    bottom.style.filter = "brightness(0.8)";
-    let header = document.getElementById("header");
-    document.getElementById("main-art").style.filter = "brightness(0.8)";
-    header.style.filter = "brightness(0.8)";
-    document.getElementById("ask-div").style.filter = "brightness(0.8)";
+    document.body.style.backgroundColor = "#242424";
+    // document.getElementById("main-art").style.setProperty("::before", "");
+    document.getElementById("main-art").style.filter = "brightness(0.7)";
+    document.getElementById("footer-div").style.filter = "brightness(0.7)";
+    document.getElementById("header").style.filter = "brightness(0.7)";
+
+    document.getElementById("ask-div").style.filter = "brightness(0.7)";
+    document.getElementById("ask-div").style.backgroundColor = "#242424";
   } else if (icon.src.includes("light")) {
     icon.src = "assets/images/dark_mode_FILL1_wght400_GRAD0_opsz24 (1).svg";
-    body.style.backgroundColor = "white";
-
-    document.getElementById("ask-div").style.filter = "brightness(1)";
-    // document.getElementById("body").style.filter = "brightness(1)";
-    document.getElementById("main-art").style.filter = "brightness(1)";
-    document.getElementById("header").style.filter = "brightness(1)";
-    document.getElementById("footer-div").style.filter = "brightness(1)";
+    document.body.style.backgroundColor = "white";
+    // document.getElementById("main-art").style.setProperty("::before", "");
+    document.getElementById("main-art").style.filter = "brightness(1.0)";
+    document.getElementById("footer-div").style.filter = "brightness(1.0)";
+    document.getElementById("header").style.filter = "brightness(1.0)";
+    document.getElementById("ask-div").style.filter = "brightness(1.0)";
+    document.getElementById("ask-div").style.backgroundColor = "#AD00FF";
   }
 }
