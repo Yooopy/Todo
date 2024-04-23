@@ -11,7 +11,7 @@ function getCookie() {
       cooks = cooks + [namee];
       makeDiv = document.createElement("div");
       makeDiv.innerHTML =
-        "<div style='display:flex; flex-direction: column;width: 100%;'><div style='display: flex;flex-direction: row;'><img style=' height: 20px;margin: auto 0 auto 10px;' src='assets/images/notes.png'><p style='display: block; word-wrap: break-word;width: 78%;font-family: lato;font-weight: 550;font-style:italic;'>" +
+        "<div style='display:flex; flex-direction: column;width: 100%;'><div style='display: flex;flex-direction: row;'><img style=' height: 20px;margin: auto 0 auto 10px;' src='assets/images/notes.png'><p class='title' style='display: block; word-wrap: break-word;width: 78%;font-family: lato;font-weight: 550;font-style:italic;'>" +
         namee +
         "</p> <div id='in-js-div-del'> <img style='height: 20px' src=assets/images/delete.png></div></div><p style='margin-top:5px;display: block; word-wrap: break-word;width: 85%;font-family: lato;font-weight: 500;'>" +
         valuee +
@@ -108,3 +108,10 @@ function changeTheme() {
     document.getElementById("ask-div").style.backgroundColor = "#AD00FF";
   }
 }
+
+let titt = document.querySelectorAll(".title");
+titt.forEach((element) => {
+  if (element.textContent === "theme") {
+    element.parentElement.parentElement.parentElement.remove();
+  }
+});
